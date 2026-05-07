@@ -438,6 +438,14 @@ Users will be able to define their own types with a custom name, icon, and color
 | Subtle borders and shadows | ShadCN defaults |
 | Syntax highlighting in code blocks | Shiki / highlight.js |
 
+
+### Screenshots
+Refer to the screenshots below as a base for dashboard UI. It does not have to be exact. Use it as a referrence 
+- @context/screenshots/dashboard.png
+- @context/screenshots/drawer.png
+
+
+
 ### Micro-interactions
 
 - Smooth drawer open/close transitions
