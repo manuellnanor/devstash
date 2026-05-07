@@ -1,31 +1,27 @@
 # Current Feature
 
-Dashboard UI Phase 1 - Core dashboard layout and dark mode setup
+Dashboard UI Phase 2 - Sidebar with collections, item types, and user profile
 
 ## Status
 
-Completed
+Not Started
 
 ## Goals
 
-- [x] ShadCN UI initialization and components
-- [x] ShadCN component installation
-- [x] Dashboard route at /dashboard
-- [x] Main dashboard layout and any global styles
-- [x] Dark mode by default
-- [x] Top bar with search and new item button (display only)
-- [x] Placeholder for sidebar and main area (h2 with "Sidebar" and "Main")
+- [ ] Collapsible sidebar with drawer icon
+- [ ] Item types list with links to /items/TYPE (e.g., /items/snippets)
+- [ ] Favorite collections display
+- [ ] Most recent collections display
+- [ ] User avatar area at the bottom of sidebar
+- [ ] Responsive drawer on mobile view
 
 ## Notes
 
-Using mock-data.ts for dashboard UI development until database is implemented.
-Reference screenshots: @context/screenshots/dashboard-ui-main.png
+Using mock-data.ts for sidebar and collections data.
+Reference screenshot: @context/screenshots/dashboard-ui-main.png
+Phase 1 (TopBar, Layout) completed and merged to main.
 
 # History
 
-- 2026-05-07: Started Dashboard UI Phase 1 - Set up project structure and mock data
-- 2026-05-07: Implemented ShadCN UI configuration, dark mode styling, and dashboard layout
-- 2026-05-07: Created dashboard route with TopBar component and DashboardLayout placeholder
-- 2026-05-07: All Phase 1 requirements completed and feature branch pushed
-- 2026-05-07: Refined TopBar layout with logo icon on left, search center, and new item button on right
-- 2026-05-07: **Phase 1 Complete** - Ready for code review and merge
+- 2026-05-07: Phase 1 completed and merged - TopBar, dark mode, basic layout
+- 2026-05-07: Starting Dashboard UI Phase 2
