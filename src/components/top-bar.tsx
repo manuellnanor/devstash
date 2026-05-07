@@ -1,16 +1,16 @@
 "use client";
 
-import { Search, Plus } from "lucide-react";
+import { Search, Plus, Zap } from "lucide-react";
 
 export function TopBar() {
   return (
     <div className="border-b border-border bg-card">
       <div className="flex items-center justify-between px-6 py-4 gap-6">
-        {/* Left: New Item Button */}
-        <button className="flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors whitespace-nowrap">
-          <Plus className="w-4 h-4" />
-          New Item
-        </button>
+        {/* Left: Logo with Icon */}
+        <div className="flex items-center gap-2 whitespace-nowrap">
+          <Zap className="w-6 h-6 text-primary" />
+          <span className="text-lg font-bold text-foreground">DevStash</span>
+        </div>
 
         {/* Center: Search */}
         <div className="flex-1 max-w-md">
@@ -24,10 +24,11 @@ export function TopBar() {
           </div>
         </div>
 
-        {/* Right: DevStash Logo */}
-        <div className="text-lg font-bold text-foreground whitespace-nowrap">
-          DevStash
-        </div>
+        {/* Right: New Item Button */}
+        <button className="flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors whitespace-nowrap">
+          <Plus className="w-4 h-4" />
+          New Item
+        </button>
       </div>
     </div>
   );
