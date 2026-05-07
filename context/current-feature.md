@@ -4,7 +4,7 @@ Dashboard UI Phase 2 - Sidebar with collections, item types, and user profile
 
 ## Status
 
-Not Started
+In Progress
 
 ## Goals
 
