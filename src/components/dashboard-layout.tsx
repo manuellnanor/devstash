@@ -1,17 +1,26 @@
 "use client";
 
+import { useState } from "react";
+import { Sidebar } from "./sidebar";
+import { TopBar } from "./top-bar";
+
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  const closeSidebar = () => setSidebarOpen(false);
+
   return (
-    <div className="flex h-full flex-1">
-      <aside className="w-64 border-r border-border bg-card p-6">
-        <h2 className="text-lg font-semibold">Sidebar</h2>
-      </aside>
-      <main className="flex-1 overflow-auto">
-        <div className="p-6">
-          <h2 className="text-lg font-semibold">Main</h2>
-        </div>
-        {children}
-      </main>
+    <div className="flex flex-col h-screen">
+      <TopBar onMenuClick={toggleSidebar} />
+      <div className="flex flex-1 overflow-hidden">
+        <Sidebar isOpen={sidebarOpen} onClose={closeSidebar} />
+        <main className="flex-1 overflow-auto">
+          <div className="p-6">
+            {children}
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

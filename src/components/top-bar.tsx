@@ -1,13 +1,24 @@
 "use client";
 
-import { Search, Plus, Zap } from "lucide-react";
+import { Search, Plus, Zap, Menu } from "lucide-react";
 
-export function TopBar() {
+interface TopBarProps {
+  onMenuClick: () => void;
+}
+
+export function TopBar({ onMenuClick }: TopBarProps) {
   return (
     <div className="border-b border-border bg-card">
       <div className="flex items-center justify-between px-6 py-4 gap-6">
-        {/* Left: Logo with Icon */}
+        {/* Left: Logo with Icon + Menu (mobile) */}
         <div className="flex items-center gap-2 whitespace-nowrap">
+          <button
+            onClick={onMenuClick}
+            className="p-1 hover:bg-muted rounded-md transition-colors lg:hidden"
+            aria-label="Toggle sidebar"
+          >
+            <Menu className="w-5 h-5" />
+          </button>
           <Zap className="w-6 h-6 text-primary" />
           <span className="text-lg font-bold text-foreground">DevStash</span>
         </div>
